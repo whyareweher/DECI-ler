@@ -1,0 +1,248 @@
+body, html{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+.HeadDiv{
+    position: relative;
+    background-color: rgb(60, 187, 230);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.HeadText{
+    color: white;
+}
+
+.NavBar{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.NavLink{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.Content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.LeftContent{
+    /*background-color: rebeccapurple;*/
+    width: 30%;
+    flex: 1;
+}
+
+.RightContent{
+    /*background-color: aqua;*/
+    width: 30%;
+    flex: 1;
+}
+
+.InLeftContent{
+    padding-left: 10px;
+}
+
+.InRightContent{
+    padding-left: 10px;
+    background-color: rgb(201, 201, 201);
+    width: 55%;
+    border-radius: 10px;
+}
+
+.Comments{
+    text-align: center;
+}
+
+.CommentInput{
+    border-radius: 15px;
+    border-color: cyan;
+    border: 3px solid rgb(139, 230, 230);
+    height: 35px;
+    background-color: rgb(221, 221, 221);
+    width: 80%;
+}
+
+.CommentInput::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.Comment{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    height: 35px;
+    border: none;
+}
+
+.LinkText{
+    text-decoration: none;
+    color: black;
+}
+
+
+.MiddleContentContainer{
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 20px 20px; 
+    grid-template-areas: 
+    "Image1 Image2 Image3"
+    "Image4 Image5 Image6"
+    "Image7 Image8 Image9";
+    justify-content: center;
+    flex: 1;
+}
+
+.Image1 {
+    grid-area: Image1;
+    text-align: center;
+}
+.Image2 {
+    grid-area: Image2; 
+    text-align: center;
+}
+.Image3 {
+    grid-area: Image3; 
+    text-align: center;
+}
+.Image4 { grid-area: Image4; text-align: center;}
+.Image5 { grid-area: Image5; text-align: center;}
+.Image6 { grid-area: Image6; text-align: center;}
+.Image7 { grid-area: Image7; text-align: center;}
+.Image8 { grid-area: Image8; text-align: center;}
+.Image9 { grid-area: Image9; text-align: center;}
+
+.IMG{
+    height: 100px;
+    width: 130px;
+}
+
+
+
+.Read{
+    background-color: rgb(30, 163, 207);
+    color: white;
+    border: 0;
+    border-radius: 2px;
+    height: 30px;
+    width: 100px;
+    font-size: 15px;
+}
+
+.Read:hover{
+    font-size: 17px;
+    transition: 0.5s;
+}
+
+
+@media (max-width: 930px){
+    .LeftContent{
+        flex: 1;
+        order: 1;
+    }
+
+    .RightContent{
+        flex: 1;
+        order: 1;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .MiddleContentContainer{
+        flex: 1;
+        order: 2;
+        flex-basis: 100%;
+        
+    }
+
+    .InLeftContent{
+        text-align: center;
+    }
+
+    .InRightContent{
+        width: 80%;
+        height: 130px;
+    }
+}
+
+@media (max-width: 790px){
+    .CommentInput{
+        border-radius: 15px;
+        border-color: cyan;
+        border: 3px solid rgb(139, 230, 230);
+        height: 35px;
+        background-color: rgb(221, 221, 221);
+        width: 50%;
+    }
+}
+
+@media (max-width: 470px){
+    .MiddleContentContainer{
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 20px 20px; 
+        grid-template-areas: 
+        "Image11 Image1 Image111"
+        "Image22 Image2 Image222"
+        "Image33 Image3 Image333"
+        "Image44 Image4 Image444"
+        "Image55 Image5 Image555"
+        "Image66 Image6 Image666"
+        "Image77 Image7 Image777"
+        "Image88 Image8 Image888"
+        "Image99 Image9 Image999";
+        justify-content: center;
+        flex: 1;
+        flex-basis: 150%;
+    }
+    
+    .Image1 {
+        grid-area: Image1;
+        text-align: center;
+    }
+    .Image2 {
+        grid-area: Image2; 
+        text-align: center;
+    }
+    .Image3 {
+        grid-area: Image3; 
+        text-align: center;
+    }
+    .Image4 { grid-area: Image4; text-align: center;}
+    .Image5 { grid-area: Image5; text-align: center;}
+    .Image6 { grid-area: Image6; text-align: center;}
+    .Image7 { grid-area: Image7; text-align: center;}
+    .Image8 { grid-area: Image8; text-align: center;}
+    .Image9 { grid-area: Image9; text-align: center;}
+
+    .IMG{
+        height: 230px;
+        width: 300px;
+    }
+
+    .KIMG h3{
+        font-size: 25px;
+    }
+
+    .Read{
+        height: 40px;
+        width: 130px;
+        font-size: 20px;
+    }
+}
